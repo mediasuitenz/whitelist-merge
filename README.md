@@ -15,3 +15,12 @@ npm install whitelist-merge --save
 ```
 
 ## Usage
+
+```js
+const object1 = {name: 'bob', gender: 'male'}
+const object2 = {age: 23, weight: '2.3'}
+const whitelist = ['name', 'age']
+
+merge(object1, object2, whitelist)
+// -> {name: 'bob', age: 23}
+```
