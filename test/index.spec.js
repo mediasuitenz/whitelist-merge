@@ -33,4 +33,11 @@ describe('whitelist merge', function () {
     const mergedObject = {name: 'bob', address: {street: 'downing st', city: 'london'}}
     expect(merge(object1, object2, whitelist)).to.deep.equal(mergedObject)
   })
+  it('correctly handles falsey values', function () {
+    const whitelist = ['isSomething', 'total']
+    const object1 = {isSomething: false, gender: 'male'}
+    const object2 = {age: 23, total: 0}
+    const mergedObject = {isSomething: false, total: 0}
+    expect(merge(object1, object2, whitelist)).to.deep.equal(mergedObject)
+  })
 })
