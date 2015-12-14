@@ -1,7 +1,7 @@
 {
   "name": "whitelist-merge",
   "description": "Merge 2 objects including only properties from supplied whitelist array",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "index.js",
   "repository": {
